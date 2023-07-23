@@ -1,0 +1,115 @@
+/* ------------------ Base Styles ------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --pureWhite: hsl(0, 0%, 100%);
+    --lightGray: hsl(212, 45%, 89%);
+    --grayishBlue: hsl(220, 15%, 55%);
+    --darkBlue: hsl(218, 44%, 22%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--lightGray);
+    font-family: 'Outfit';
+}
+
+/* ------------------ Main Styles ------------------ */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    padding: 16px;
+    background: var(--pureWhite);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .qr-code img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.container .qr-code-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container .qr-code-text h1,p {
+    text-align: center;
+    margin: 0 2px;
+}
+
+.container .qr-code-text h1 {
+    font-family: 'Outfit';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6rem;
+    color: var(--darkBlue);
+    margin-bottom: 14px;
+}
+
+.container .qr-code-text p {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--grayishBlue);
+    margin-bottom: 20px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ------------------ Media Queries ------------------ */
+
+/* Desktop Query */
+@media only screen and (min-width: 1440px) {
+    html {
+        background: var(--pureWhite);
+    }
+
+    body {
+        width: 95vw;
+        height: 80vh;
+    }
+}
+
+/* Mobile Query (Portrait) */
+@media only screen and (max-width: 375px) {
+    html {
+        font-size: 95%;
+    }
+
+    .container {
+        margin: 20px;
+    }
+
+    .attribution {
+        margin:0 10px;
+    }
+}
